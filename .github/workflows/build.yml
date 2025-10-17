@@ -33,10 +33,10 @@ jobs:
       # - name: Generate HTML page
       #   run: python generate_html.py
 
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: ./pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./pages
 
   deploy:
     if: github.ref == 'refs/heads/main'
