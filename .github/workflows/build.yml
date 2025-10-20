@@ -30,8 +30,8 @@ jobs:
       - name: Validate questionnaire format
         run: python pages/validate.py content/questionnaire.md
 
-      # - name: Generate HTML page
-      #   run: python generate_html.py
+      - name: Generate HTML page
+        run: python pages/build.py content/questionnaire.md pages/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
